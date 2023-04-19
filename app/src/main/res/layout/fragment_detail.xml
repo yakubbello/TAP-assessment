@@ -29,7 +29,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:src="@drawable/ic_launcher_background"
+                    android:contentDescription="@string/content_attribute"/>
                 
             </androidx.cardview.widget.CardView>
             
@@ -82,6 +83,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text=""
+                        android:layout_gravity="center_vertical"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
                         tools:text="Year" />
@@ -92,19 +94,47 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text=""
+                        android:layout_gravity="center_vertical"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
                         tools:text="Votes" />
 
-                    <TextView
-                        android:id="@+id/movieRating"
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text=""
-                        android:textColor="#FFFFFF"
-                        android:textSize="15sp"
-                        tools:text="Rating" />
+                        android:layout_height="wrap_content">
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar"
+                            style="@style/CircularDeterminateProgressBar"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:progress="60"
+                            android:progressDrawable="@drawable/progress_background"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:progress="60" />
+
+                        <TextView
+                            android:id="@+id/movieRating"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:gravity="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
+                            app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+                            app:layout_constraintStart_toStartOf="@+id/progress_bar"
+                            app:layout_constraintTop_toTopOf="@+id/progress_bar"
+                            tools:text="7.8" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
                 </LinearLayout>
 

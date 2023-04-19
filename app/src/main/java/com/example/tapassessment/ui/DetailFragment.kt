@@ -1,12 +1,10 @@
 package com.example.tapassessment.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.fragment.app.Fragment
 import coil.load
 import com.example.tapassessment.R
 import com.example.tapassessment.databinding.FragmentDetailBinding
@@ -23,7 +21,7 @@ class DetailFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         return FragmentDetailBinding.inflate(inflater, container, false).run {
             binding = this
             root
@@ -48,6 +46,7 @@ class DetailFragment : Fragment() {
             movieVotes.text = getString(R.string.votes, movie.voteCount)
             movieRating.text = getString(R.string.rating, movie.voteAverage)
             movieOverView.text = movie.overview
+            progressBar.progress = ((movie.voteAverage/10)*100).toInt()
         }
     }
 }
