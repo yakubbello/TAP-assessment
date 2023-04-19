@@ -23,7 +23,7 @@ class MovieFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         return FragmentMovieBinding.inflate(inflater, container, false).run {
             binding = this
             root
@@ -47,8 +47,6 @@ class MovieFragment : Fragment() {
                 errorMessage.isVisible = result is Resource.Error
                 errorMessage.text = result.error?.localizedMessage
             }
-
-
         }
     }
 }

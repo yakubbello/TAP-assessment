@@ -18,10 +18,10 @@ class MovieAdapter(private val itemSelected: (movie: Movie) -> Unit) :
     companion object {
         val DIFF_UTIL = object : DiffUtil.ItemCallback<Movie>() {
             override fun areItemsTheSame(oldItem: Movie, newItem: Movie) = oldItem.id == newItem.id
-
             override fun areContentsTheSame(oldItem: Movie, newItem: Movie) = oldItem == newItem
         }
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
         return DisplayMovieBinding.inflate(LayoutInflater.from(parent.context))
@@ -48,6 +48,6 @@ class MovieAdapter(private val itemSelected: (movie: Movie) -> Unit) :
     }
 
     class MovieViewHolder(bind: DisplayMovieBinding) : RecyclerView.ViewHolder(bind.root) {
-        var binding = bind
+        val binding = bind
     }
 }

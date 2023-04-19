@@ -29,12 +29,10 @@ class DetailFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        val navController = findNavController()
-//        binding.toolbar.setupWithNavController(navController)
-
         val movie = DetailFragmentArgs.fromBundle(requireArguments()).movie
         setupUi(movie)
     }
+
     private fun setupUi(movie: Movie) {
         binding.apply {
             displayImage.load(IMAGE_BASE_URL + movie.movieImage) {
@@ -46,7 +44,7 @@ class DetailFragment : Fragment() {
             movieVotes.text = getString(R.string.votes, movie.voteCount)
             movieRating.text = getString(R.string.rating, movie.voteAverage)
             movieOverView.text = movie.overview
-            progressBar.progress = ((movie.voteAverage/10)*100).toInt()
+            progressBar.progress = ((movie.voteAverage / 10) * 100).toInt()
         }
     }
 }

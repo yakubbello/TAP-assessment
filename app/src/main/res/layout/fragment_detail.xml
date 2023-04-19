@@ -15,8 +15,8 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="350dp"
-            app:layout_scrollFlags="scroll"
-            app:contentScrim="@android:color/transparent">
+            app:contentScrim="@android:color/transparent"
+            app:layout_scrollFlags="scroll">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
@@ -28,16 +28,16 @@
                     android:id="@+id/displayImage"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/content_attribute"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
-                    android:contentDescription="@string/content_attribute"/>
-                
+                    android:src="@drawable/ic_launcher_background" />
+
             </androidx.cardview.widget.CardView>
-            
+
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"/>
+                android:layout_height="?attr/actionBarSize" />
 
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -81,9 +81,9 @@
                         android:id="@+id/movieYear"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_weight="1"
                         android:text=""
-                        android:layout_gravity="center_vertical"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
                         tools:text="Year" />
@@ -92,17 +92,17 @@
                         android:id="@+id/movieVotes"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_weight="1"
                         android:text=""
-                        android:layout_gravity="center_vertical"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
                         tools:text="Votes" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <ProgressBar
                             android:id="@+id/progress_bar"
@@ -122,8 +122,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text=""
                             android:gravity="center"
+                            android:text=""
                             android:textColor="#FFFFFF"
                             android:textSize="15sp"
                             app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
@@ -133,7 +133,6 @@
                             tools:text="7.8" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
                 </LinearLayout>
