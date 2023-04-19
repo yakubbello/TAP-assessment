@@ -1,0 +1,108 @@
+package com.example.tapassessment.model
+
+val movieList = listOf(
+    Movie(
+        isAdult = false,
+        movieImage = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        id = 502356,
+        originalTitle = "The Super Mario Bros. Movie",
+        overview = "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
+        popularity = 13700.561,
+        posterPath = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        releaseDate = "2023-04-05",
+        title = "The Super Mario Bros. Movie",
+        voteAverage = 7.5,
+        voteCount = 951
+    ),
+    Movie(
+        isAdult = false,
+        movieImage = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        id = 502356,
+        originalTitle = "The Super Mario Bros. Movie",
+        overview = "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
+        popularity = 13700.561,
+        posterPath = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        releaseDate = "2023-04-05",
+        title = "The Super Mario Bros. Movie",
+        voteAverage = 7.5,
+        voteCount = 951
+    ),
+    Movie(
+        isAdult = false,
+        movieImage = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        id = 502356,
+        originalTitle = "The Super Mario Bros. Movie",
+        overview = "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
+        popularity = 13700.561,
+        posterPath = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        releaseDate = "2023-04-05",
+        title = "The Super Mario Bros. Movie",
+        voteAverage = 7.5,
+        voteCount = 951
+    ),
+    Movie(
+        isAdult = false,
+        movieImage = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        id = 502356,
+        originalTitle = "The Super Mario Bros. Movie",
+        overview = "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
+        popularity = 13700.561,
+        posterPath = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        releaseDate = "2023-04-05",
+        title = "The Super Mario Bros. Movie",
+        voteAverage = 7.5,
+        voteCount = 951
+    ),
+    Movie(
+        isAdult = false,
+        movieImage = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        id = 502356,
+        originalTitle = "The Super Mario Bros. Movie",
+        overview = "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
+        popularity = 13700.561,
+        posterPath = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        releaseDate = "2023-04-05",
+        title = "The Super Mario Bros. Movie",
+        voteAverage = 7.5,
+        voteCount = 951
+    ),
+    Movie(
+        isAdult = false,
+        movieImage = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        id = 502356,
+        originalTitle = "The Super Mario Bros. Movie",
+        overview = "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
+        popularity = 13700.561,
+        posterPath = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        releaseDate = "2023-04-05",
+        title = "The Super Mario Bros. Movie",
+        voteAverage = 7.5,
+        voteCount = 951
+    ),
+    Movie(
+        isAdult = false,
+        movieImage = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        id = 502356,
+        originalTitle = "The Super Mario Bros. Movie",
+        overview = "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
+        popularity = 13700.561,
+        posterPath = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        releaseDate = "2023-04-05",
+        title = "The Super Mario Bros. Movie",
+        voteAverage = 7.5,
+        voteCount = 951
+    ),
+    Movie(
+        isAdult = false,
+        movieImage = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        id = 502356,
+        originalTitle = "The Super Mario Bros. Movie",
+        overview = "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
+        popularity = 13700.561,
+        posterPath = "https://image.tmdb.org/t/p/w780/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        releaseDate = "2023-04-05",
+        title = "The Super Mario Bros. Movie",
+        voteAverage = 7.5,
+        voteCount = 951
+    ),
+)
