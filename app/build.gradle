@@ -76,4 +76,7 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.7.0")
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+
+    //Splashscreen
+    implementation "androidx.core:core-splashscreen:1.0.1"
 }
