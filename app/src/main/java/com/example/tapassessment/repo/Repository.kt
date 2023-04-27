@@ -32,16 +32,6 @@ class Repository @Inject constructor(
     )
 
 
-//        flow {
-//        emit(Resource.Loading())
-//        try {
-//            val response = service.getPopularMovies()
-//            emit(Resource.Success(response.body()))
-//        } catch (throwable: Throwable) {
-//            emit(Resource.Error(throwable))
-//        }
-//    }
-
     fun getFavoriteMovies():Flow<List<Movie>>{
         return movieDao.getFavoriteMovies()
     }
