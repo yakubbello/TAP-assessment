@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface NetworkService {
     @GET("popular")
-    suspend fun getPopularMovies():Response<NewMovie>
+    suspend fun getPopularMovies():NewMovie
 }

@@ -35,16 +35,16 @@ class MovieFragment : Fragment() {
         binding.apply {
             viewModel.movies.observe(viewLifecycleOwner) { result ->
                 recycleView.apply {
-                    if (result is Resource.Success) {
+                    if (result is Resource.Success || result.data!!.isNotEmpty()) {
                         adapter = MovieAdapter {
                             findNavController().navigate(MovieFragmentDirections.toDetailFragment(it))
                         }.apply {
-                            submitList(result.data?.movies)
+                            submitList(result.data)
                         }
                     }
                 }
-                progressBar.isVisible = result is Resource.Loading
-                errorMessage.isVisible = result is Resource.Error
+                progressBar.isVisible = result is Resource.Loading && result.data!!.isNullOrEmpty()
+                errorMessage.isVisible = result is Resource.Error && result.data!!.isNullOrEmpty()
                 errorMessage.text = result.error?.localizedMessage
             }
         }

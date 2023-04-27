@@ -41,7 +41,7 @@ class MovieAdapter(private val itemSelected: (movie: Movie) -> Unit) :
                 placeholder(R.drawable.ic_launcher_background)
             }
 
-            this.root.setOnClickListener {
+            movieImage.setOnClickListener {
                 itemSelected.invoke(movie)
             }
         }
