@@ -29,7 +29,7 @@ object DataModule {
 
 
     @Provides
-    fun provideAlbumPhotoDao(appDatabase: AppDatabase):MovieDao{
+    fun providesMovieDao(appDatabase: AppDatabase):MovieDao{
         return appDatabase.movieDao()
     }
 }
