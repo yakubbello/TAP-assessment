@@ -40,9 +40,8 @@ class MovieFragment : Fragment() {
                 recycleView.apply {
                     if (result is Resource.Success || result.data!!.isNotEmpty()) {
                         adapter = MovieAdapter({ itemSelected ->
-                            findNavController().navigate(
-                                MovieFragmentDirections.toDetailFragment(itemSelected)
-                            ) }, ::addFavorite).apply {
+                            findNavController().navigate(HomeFragmentDirections.toDetailFragment(itemSelected))
+                             }, ::addFavorite).apply {
                                 submitList(result.data)
                         }
                     }

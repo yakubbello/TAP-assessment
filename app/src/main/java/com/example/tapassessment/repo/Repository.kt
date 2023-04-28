@@ -27,7 +27,8 @@ class Repository @Inject constructor(
                 movieDao.deleteAllAlbumPhoto()
                 movieDao.insertMovies(data.movies)
             }
-
+        }, shouldFetch = {userInDB ->
+            userInDB.isEmpty()
         }
     )
 

@@ -27,5 +27,11 @@
         <item name="postSplashScreenTheme">@style/Theme.TAPAssessment</item>
     </style>
 
+    <style name="SimpleTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
 
 </resources>
