@@ -11,6 +11,7 @@ import com.example.tapassessment.databinding.FragmentDetailBinding
 import com.example.tapassessment.model.Movie
 import com.example.tapassessment.utils.IMAGE_BASE_URL
 import com.example.tapassessment.utils.convertDateFormat
+import com.example.tapassessment.utils.rating
 
 
 class DetailFragment : Fragment() {
@@ -44,7 +45,7 @@ class DetailFragment : Fragment() {
             movieVotes.text = getString(R.string.votes, movie.voteCount)
             movieRating.text = getString(R.string.rating, movie.voteAverage)
             movieOverView.text = movie.overview
-            progressBar.progress = ((movie.voteAverage / 10) * 100).toInt()
+            progressBar.progress = rating(movie.voteAverage)
         }
     }
 }

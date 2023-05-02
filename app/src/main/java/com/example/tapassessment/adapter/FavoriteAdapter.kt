@@ -12,6 +12,7 @@ import com.example.tapassessment.databinding.DisplayFavoriteBinding
 import com.example.tapassessment.model.Movie
 import com.example.tapassessment.utils.IMAGE_BASE_URL
 import com.example.tapassessment.utils.convertDateFormat
+import com.example.tapassessment.utils.rating
 
 class FavoriteAdapter(
     private val itemSelected: (movie: Movie) -> Unit,
@@ -45,7 +46,7 @@ class FavoriteAdapter(
             }
 
             movieRating.text = holder.itemView.context.getString(R.string.rating, movie.voteAverage)
-            progressBar.progress = ((movie.voteAverage / 10) * 100).toInt()
+            progressBar.progress = rating(movie.voteAverage)
 
             movieImage.setOnClickListener {
                 itemSelected.invoke(movie)

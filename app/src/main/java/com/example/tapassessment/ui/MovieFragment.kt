@@ -9,6 +9,8 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.tapassessment.adapter.MovieAdapter
 import com.example.tapassessment.databinding.FragmentMovieBinding
 import com.example.tapassessment.model.Movie
@@ -23,27 +25,34 @@ class MovieFragment : Fragment() {
         ViewModelProvider(requireActivity()).get(MovieViewModel::class.java)
     }
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
+
         return FragmentMovieBinding.inflate(inflater, container, false).run {
             binding = this
             root
         }
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
         binding.apply {
             viewModel.movies.observe(viewLifecycleOwner) { result ->
                 recycleView.apply {
                     if (result is Resource.Success || result.data!!.isNotEmpty()) {
+                        if (savedInstanceState != null){
+                            layoutManager?.onRestoreInstanceState(savedInstanceState.getParcelable("scroll_state"))
+                        }
                         adapter = MovieAdapter({ itemSelected ->
-                            findNavController().navigate(HomeFragmentDirections.toDetailFragment(itemSelected))
-                             }, ::addFavorite).apply {
-                                submitList(result.data)
+                            findNavController().navigate(
+                                HomeFragmentDirections.toDetailFragment(itemSelected))
+                        }, ::addFavorite).apply {
+                            submitList(result.data)
                         }
                     }
+                    layoutManager = GridLayoutManager(requireContext(), 2)
                 }
                 progressBar.isVisible = result is Resource.Loading && result.data!!.isNullOrEmpty()
                 errorMessage.isVisible = result is Resource.Error && result.data!!.isNullOrEmpty()
@@ -53,11 +62,17 @@ class MovieFragment : Fragment() {
     }
 
     private fun addFavorite(movie: Movie) {
-        viewModel.addFavorite(movie)
+        viewModel.addFavorite(id = movie.id, isFavorite = movie.isFavorite)
 
-        if (movie.isFavorite){
-            Toast.makeText(requireContext(),"${movie.originalTitle} is added", Toast.LENGTH_SHORT).show()
-        }else
-            Toast.makeText(requireContext(),"${movie.originalTitle} is Removed", Toast.LENGTH_SHORT).show()
+        if (movie.isFavorite) {
+            Toast.makeText(requireContext(), "${movie.originalTitle} is added", Toast.LENGTH_SHORT)
+                .show()
+        } else
+            Toast.makeText(
+                requireContext(),
+                "${movie.originalTitle} is Removed",
+                Toast.LENGTH_SHORT
+            ).show()
+
     }
 }

@@ -17,8 +17,8 @@ interface MovieDao {
     @Query(value = "DELETE from popularMovies")
     suspend fun deleteAllAlbumPhoto()
 
-    @Update
-    suspend fun addFavoriteMovie(movie: Movie)
+    @Query("UPDATE popularMovies SET isFavorite = :isFavorite WHERE id = :id")
+    suspend fun addFavoriteMovie(id: Int, isFavorite:Boolean)
 
     @Query("SELECT * FROM popularMovies WHERE isFavorite = 1 ")
     fun getFavoriteMovies(): Flow<List<Movie>>

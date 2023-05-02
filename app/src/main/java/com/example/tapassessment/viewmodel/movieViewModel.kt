@@ -19,9 +19,9 @@ class MovieViewModel @Inject constructor(
 
     val movies = repo.getPopularMovies().asLiveData()
 
-    fun addFavorite(movie: Movie){
+    fun addFavorite(id: Int, isFavorite:Boolean){
         viewModelScope.launch(Dispatchers.IO) {
-            repo.addFavoriteMovie(favoriteMovie = movie)
+            repo.addFavoriteMovie(id = id, isFavorite = isFavorite)
         }
     }
 

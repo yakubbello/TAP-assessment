@@ -15,7 +15,7 @@ import com.example.tapassessment.utils.convertDateFormat
 
 class MovieAdapter(
     private val itemSelected: (movie: Movie) -> Unit,
-    private val favoritedMovie: (Movie) -> Unit
+    private val favoriteMovie: (Movie) -> Unit
 ) : ListAdapter<Movie, MovieAdapter.MovieViewHolder>(DIFF_UTIL) {
 
     companion object {
@@ -58,15 +58,16 @@ class MovieAdapter(
                 if (movie.isFavorite) {
                     movie.isFavorite = false
                     favorite.setImageResource(R.drawable.favorite)
-                    favoritedMovie.invoke(movie)
+                    favoriteMovie.invoke(movie)
                 } else {
                     movie.isFavorite = true
                     favorite.setImageResource(R.drawable.baseline_favorite)
-                    favoritedMovie.invoke(movie)
+                    favoriteMovie.invoke(movie)
                 }
             }
         }
     }
+
 
     class MovieViewHolder(bind: DisplayMovieBinding) : RecyclerView.ViewHolder(bind.root) {
         val binding = bind

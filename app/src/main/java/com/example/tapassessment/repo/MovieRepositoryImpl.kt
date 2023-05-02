@@ -37,8 +37,8 @@ class MovieRepositoryImpl @Inject constructor(
         return movieDao.getFavoriteMovies()
     }
 
-    override suspend fun addFavoriteMovie(favoriteMovie: Movie) {
-        movieDao.addFavoriteMovie(favoriteMovie)
+    override suspend fun addFavoriteMovie(id: Int, isFavorite:Boolean) {
+        movieDao.addFavoriteMovie(id = id, isFavorite = isFavorite)
     }
 
 }

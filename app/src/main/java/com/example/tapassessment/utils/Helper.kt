@@ -10,3 +10,7 @@ fun convertDateFormat(inputDate: String): String{
     val outputFormat = SimpleDateFormat("MMM yyyy", Locale.getDefault())
     return outputFormat.format(date)
 }
+
+fun rating(rate:Double): Int {
+    return ((rate / 10) * 100).toInt()
+}
